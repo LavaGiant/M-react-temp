@@ -2,16 +2,15 @@ import * as actionTypes from './constants'
 
 import { Map } from 'immutable'
 
-type stateType = Map<string, any>
 
-const defaultState: stateType = Map({
+const defaultState = Map({
   tipText: 'hello cli' as string,
 })
 
-const reducer = <T>(state: stateType = defaultState, { type, value }: StoreGlobal.ActionType<T>): stateType => {
+const reducer = (state = defaultState, { type, payload }: StoreGlobal.ActionType) => {
   switch (type) {
     case actionTypes.CHANG_TIP_TEXT: 
-      return state.set('tipText', value)
+      return state.set('tipText', payload as string)
     default:
       return state
   }

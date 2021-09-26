@@ -6,7 +6,7 @@ import { changeTipTextAction } from './store/actionCreators'
 
 const HelloWorld: MemoExoticComponent<() => any> = memo(() => {
   const { tipText }: any = useSelector((state: Map<string, any>) => ({
-    tipText: state.getIn(['hello', 'tipText'])
+    tipText: state.getIn(['hello-world', 'tipText'])
   }), shallowEqual)
 
   const dispatch = useDispatch()

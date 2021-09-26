@@ -1,6 +1,6 @@
 declare namespace StoreGlobal {
-  interface ActionType<T> {
+  interface ActionType {
     readonly type: string
-    value: T
+    payload: unknown
   }
 }
