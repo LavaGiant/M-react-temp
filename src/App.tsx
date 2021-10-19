@@ -1,20 +1,13 @@
-import { memo, FC, Suspense } from 'react'
-import { renderRoutes } from 'react-router-config'
-import { BrowserRouter } from 'react-router-dom'
+import { memo, FC } from 'react'
 import { Provider } from 'react-redux'
 
-import routes from '@/router'
 import store from '@/store'
 
-import GlobalSkeleton from '@/components/global-skeleton'
+import Router from '@/router'
 
 const App: FC = memo(() => (
   <Provider store={store}>
-    <BrowserRouter>
-    <Suspense fallback={<GlobalSkeleton />}>
-      {renderRoutes(routes)}
-    </Suspense>
-  </BrowserRouter>
+    <Router loginAuth={false} />
   </Provider>
 ))
 
