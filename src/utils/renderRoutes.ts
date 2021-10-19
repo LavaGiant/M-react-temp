@@ -1,9 +1,9 @@
-import { RouterItem } from '@/router/mainRoutes';
+import { RouteItem } from '@/router/mainRoutes';
 import { createElement } from 'react';
 import { Switch, Route } from 'react-router';
 import { GuardedRoute } from 'react-router-guards'
 
-export const renderRoutes = (routes: RouterItem[], auth = false, extraProps = {}, switchProps = {}) => routes ?
+export const renderRoutes = (routes: RouteItem[], auth = false, extraProps = {}, switchProps = {}) => routes ?
   createElement(Switch, switchProps, routes.map((route, i): JSX.Element => createElement(auth ? GuardedRoute : Route, {
       ...route,
       key: route.key || i,
