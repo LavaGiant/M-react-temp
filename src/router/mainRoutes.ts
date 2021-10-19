@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 const NotFound = lazy(() => import('@/pages/404'))
 const HelloWorld = lazy(() => import('@/pages/hello-world'))
 
-export interface RouterItem {
+export interface RouteItem {
   key?: string | number
   path: string
   component?: LazyExoticComponent<MemoExoticComponent<() => JSX.Element>>
@@ -18,7 +18,7 @@ export interface RouterItem {
 }
 
 
-const routes: RouterItem[] = [
+const routes: RouteItem[] = [
   {
     path: '/',
     exact: true,
