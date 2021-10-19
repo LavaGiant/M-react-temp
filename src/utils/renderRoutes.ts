@@ -8,6 +8,7 @@ export const renderRoutes = (routes: RouteItem[], auth = false, extraProps = {},
       ...route,
       key: route.key || i,
       component: undefined,
+      children: null,
       render: props => route.render ?
         route.render(Object.assign({}, props, {}, extraProps, { route }))
         :
