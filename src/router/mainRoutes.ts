@@ -10,6 +10,7 @@ export interface RouteItem {
   component?: LazyExoticComponent<MemoExoticComponent<() => JSX.Element>>
   exact?: boolean
   strict?: boolean
+  children?: RouteItem[]
   meta?: {
     auth?: boolean
     [key:string]: any
@@ -30,7 +31,7 @@ const routes: RouteItem[] = [
   },
   {
     path: '/hello',
-    component: HelloWorld,
+    component: HelloWorld
   },
   {
     path: '*',
