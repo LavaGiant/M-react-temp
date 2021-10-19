@@ -4,11 +4,17 @@ import { Redirect } from 'react-router-dom'
 const NotFound = lazy(() => import('@/pages/404'))
 const HelloWorld = lazy(() => import('@/pages/hello-world'))
 
-interface RouterItem {
+export interface RouterItem {
+  key?: string | number
   path: string
   component?: LazyExoticComponent<MemoExoticComponent<() => JSX.Element>>
   exact?: boolean
-  render?: () => JSX.Element
+  strict?: boolean
+  meta?: {
+    auth?: boolean
+    [key:string]: any
+  }
+  render?: (...r:any) => JSX.Element
 }
 
 
@@ -24,7 +30,7 @@ const routes: RouterItem[] = [
   },
   {
     path: '/hello',
-    component: HelloWorld
+    component: HelloWorld,
   },
   {
     path: '*',
