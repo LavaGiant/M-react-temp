@@ -1,1 +1,1 @@
-export const CHANG_COUNT:string = 'counter/CHANG_COUNT'
+export const CHANG_COUNT: string = 'counter/CHANG_COUNT'
