@@ -12,7 +12,7 @@ export const CounterWrapper = styled.div`
     font-size: 100px;
   }
   .control{
-    width: 200px;
+    width: 30vw;
     display: flex;
     justify-content: space-between;
     .ant-btn{
