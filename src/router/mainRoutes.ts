@@ -1,21 +1,22 @@
-import { createElement, lazy, LazyExoticComponent, MemoExoticComponent } from 'react'
+import { createElement, FC, lazy, LazyExoticComponent } from 'react'
 import { Redirect } from 'react-router-dom'
 
 const NotFound = lazy(() => import('@/pages/404'))
 const HelloWorld = lazy(() => import('@/pages/hello-world'))
+const Counter = lazy(() => import('@/pages/counter'))
 
 export interface RouteItem {
   key?: string | number
   path: string
-  component?: LazyExoticComponent<MemoExoticComponent<() => JSX.Element>>
+  component?: LazyExoticComponent<FC>
   exact?: boolean
   strict?: boolean
   children?: RouteItem[]
   meta?: {
     auth?: boolean
-    [key:string]: any
+    [key: string]: any
   }
-  render?: (...r:any) => JSX.Element
+  render?: (...r: any) => JSX.Element
 }
 
 
@@ -32,6 +33,10 @@ const routes: RouteItem[] = [
   {
     path: '/hello',
     component: HelloWorld
+  },
+  {
+    path: '/counter',
+    component: Counter
   },
   {
     path: '*',

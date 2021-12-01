@@ -1,6 +1,6 @@
-import styled, { StyledComponent } from 'styled-components'
+import styled from 'styled-components'
 
-export const SkeletonWrapper: StyledComponent<'div', any> = styled.div`
+export const SkeletonWrapper = styled.div`
   background-color: #fff;
   height: 60vh;
   .loading{

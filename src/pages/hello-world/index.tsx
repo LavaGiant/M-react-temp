@@ -1,20 +1,26 @@
-import { memo, MemoExoticComponent } from 'react'
-import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import { Map } from 'immutable'
+import { memo, FC } from 'react'
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Button } from 'antd'
-import { changeTipTextAction } from './store/actionCreators'
 
-const HelloWorld: MemoExoticComponent<() => any> = memo(() => {
-  const { tipText }: any = useSelector((state: Map<string, any>) => ({
-    tipText: state.getIn(['hello-world', 'tipText'])
-  }), shallowEqual)
+import logo from '@/assets/img/logo.svg';
 
-  const dispatch = useDispatch()
+import { HelloWrapper } from './style'
+
+const HelloWorld: FC = memo(() => {
+  const { count } = useSelector((state: any) => ({
+    count: state.getIn(['counter', 'count'])
+  }))
+  const history = useHistory()
   return (
-    <>
-      {tipText}
-      <Button type="primary" onClick={() => dispatch(changeTipTextAction('哈哈哈'))}>123</Button>
-    </>
+    <HelloWrapper>
+      <img src={logo} className="logo" alt="logo" />
+      <p>
+        Edit <code>src/pages/hello-world/index.tsx</code> and save to reload.
+      </p>
+      <p>count: {count}</p>
+      <Button type="primary" className="btn" onClick={() => history.push("/counter")}>Counter</Button>
+    </HelloWrapper>
   )
 })
 
