@@ -9,7 +9,7 @@ import '@/assets/css/reset.css'
 ReactDOM.render(
   <ConfigProvider locale={zhCN}>
     <App />
-  </ConfigProvider>,,
+  </ConfigProvider>,
   document.getElementById('root')
 );
 
