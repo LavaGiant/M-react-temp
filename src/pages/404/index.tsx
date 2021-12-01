@@ -1,7 +1,7 @@
-import { memo } from 'react'
+import { FC, memo } from 'react'
 
 import { NotFoundWrapper } from './style'
-const NotFound = memo(() => {
+const NotFound: FC = memo(() => {
   return (
     <NotFoundWrapper>
       <div className="content wrap-v2">

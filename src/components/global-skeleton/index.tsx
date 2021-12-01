@@ -2,6 +2,7 @@ import { FC, memo } from 'react'
 import { Skeleton, Spin } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons';
 import { SkeletonWrapper } from './style'
+
 const GlobalSkeleton: FC = memo(() => {
   const icon = <LoadingOutlined style={{ fontSize: 50 }} spin />
   return (

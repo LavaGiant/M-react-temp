@@ -1,6 +1,6 @@
-import styled, { StyledComponent } from 'styled-components'
+import styled from 'styled-components'
 
-export const NotFoundWrapper: StyledComponent<'div', any> = styled.div`
+export const NotFoundWrapper = styled.div`
   .content{
     height: 470px;
     background-color: #fff;

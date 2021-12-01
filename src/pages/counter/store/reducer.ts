@@ -4,13 +4,13 @@ import { Map } from 'immutable'
 
 
 const defaultState = Map({
-  tipText: 'hello cli' as string,
+  count: 0 as number,
 })
 
 const reducer = (state = defaultState, { type, payload }: StoreGlobal.ActionType) => {
   switch (type) {
-    case actionTypes.CHANG_TIP_TEXT: 
-      return state.set('tipText', payload as string)
+    case actionTypes.CHANG_COUNT: 
+      return state.set('count', payload as number)
     default:
       return state
   }
