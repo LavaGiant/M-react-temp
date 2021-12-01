@@ -9,7 +9,7 @@ const defaultState = Map({
 
 const reducer = (state = defaultState, { type, payload }: StoreGlobal.ActionType) => {
   switch (type) {
-    case actionTypes.CHANG_COUNT: 
+    case actionTypes.CHANG_COUNT:
       return state.set('count', payload as number)
     default:
       return state
