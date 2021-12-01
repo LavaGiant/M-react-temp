@@ -23,6 +23,9 @@ const Counter: FC = memo(() => {
       <div className="control">
         <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'add'))}>+</Button>
         <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'sub'))}>-</Button>
+        <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'mul'))}>x</Button>
+        <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'div'))}>/</Button>
+        <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'surp'))}>%</Button>
         <Button type="primary" size="large" shape="circle" onClick={() => dispatch(changCountAction(0))}>C</Button>
       </div>
       <Button type="primary" className="btn" onClick={() => history.push("/")}>Back</Button>

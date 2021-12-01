@@ -12,6 +12,7 @@ export class NumberPrecision {
     this.sub = this.sub.bind(this)
     this.mul = this.mul.bind(this)
     this.div = this.div.bind(this)
+    this.surp = this.surp.bind(this)
   }
   /**
    * @param num 数字
@@ -140,6 +141,24 @@ export class NumberPrecision {
   }
 
   /**
+   * @param nums 不定数字参数
+   * @returns
+   * @description 精确取余(支持科学计数法)
+   * @example
+   * surp(1.1, 1) = 0.1
+   * surp(11e-1, 1) = 0.1
+   * @author Malphite
+   */
+  public surp(...nums: numType[]) {
+    if (nums.length > 2) {
+      return this.iteratorOperation(nums, this.surp)
+    }
+    const [num1, num2] = nums
+    const baseNum: number = Math.pow(10, Math.max(this.digitLength(num1), this.digitLength(num2)))
+    return (this.mul(num1, baseNum) % this.mul(num2, baseNum)) / baseNum
+  }
+
+  /**
    * @param num 小数
    * @returns
    * @description 将小数转换为整数(支持科学计数法)
@@ -185,19 +204,6 @@ export class NumberPrecision {
       result = this.mul(result, -1)
     }
     return result
-  }
-
-  /**
-   * @param num 小数
-   * @returns
-   * @description 取余操作(支持科学计数法)
-   * @example
-   * float2Fixed(2.4) = 24
-   * float2Fixed(2.4e-4) = 24
-   * @author Malphite
-   */
-  public surp() {
-
   }
 }
 
