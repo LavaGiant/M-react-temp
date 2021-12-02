@@ -1,1 +1,0 @@
-export { default as GlobalSkeleton } from '@/components/global-skeleton';

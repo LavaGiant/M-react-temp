@@ -1,6 +1,5 @@
 import { memo, FC, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router'
 
 import { Button, InputNumber } from 'antd'
 
@@ -12,7 +11,6 @@ const Counter: FC = memo(() => {
   const { count }: { count: number } = useSelector((state: any) => ({
     count: state.getIn(['counter', 'count'])
   }))
-  const history = useHistory()
   const dispatch = useDispatch()
   return (
     <CounterWrapper>
@@ -28,7 +26,6 @@ const Counter: FC = memo(() => {
         <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'surp'))}>%</Button>
         <Button type="primary" size="large" shape="circle" onClick={() => dispatch(changCountAction(0))}>C</Button>
       </div>
-      <Button type="primary" className="btn" onClick={() => history.push("/")}>Back</Button>
     </CounterWrapper>
   )
 })
