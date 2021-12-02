@@ -1,13 +1,8 @@
 import { memo } from 'react'
-import { Provider } from 'react-redux'
-
-import Router from '@/router'
-import store from '@/store'
+import HelloWorld from '@/pages/hello-world'
 
 const App = memo(() => (
-  <Provider store={store}>
-    <Router />
-  </Provider>
+  <HelloWorld />
 ))
 
 export default App
