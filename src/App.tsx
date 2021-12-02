@@ -2,12 +2,11 @@ import { memo, FC } from 'react'
 import { Provider } from 'react-redux'
 
 import store from '@/store'
-
-import Router from '@/router'
+import Counter from '@/pages/counter'
 
 const App: FC = memo(() => (
   <Provider store={store}>
-    <Router loginAuth={false} />
+    <Counter />
   </Provider>
 ))
 
