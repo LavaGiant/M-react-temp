@@ -1,15 +1,11 @@
 import ReactDOM from 'react-dom';
-import { ConfigProvider } from 'antd';
-import zhCN from 'antd/lib/locale/zh_CN';
 
 import App from '@/App'
 
 import '@/assets/css/reset.css'
 
 ReactDOM.render(
-  <ConfigProvider locale={zhCN}>
-    <App />
-  </ConfigProvider>,
+  <App />,
   document.getElementById('root')
 );
 

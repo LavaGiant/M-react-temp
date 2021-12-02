@@ -1,8 +1,8 @@
-export const onloadLayout = (): void => {
+export const onloadLayout = () => {
   //获取当前浏览器窗口宽度(这里的实质就是body宽度)
-  let win_w: number = document.body.offsetWidth;
+  let win_w = document.body.offsetWidth;
   //定义变量
-  let fontSize: number = 16;
+  let fontSize = 16;
   //如果浏览器窗口宽度(这里的实质就是body宽度)值小于320，取320
   win_w = Math.max(320, win_w);
   fontSize = win_w / 1600 * 16
