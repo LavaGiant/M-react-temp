@@ -1,0 +1,1 @@
+export { default as GlobalSkeleton } from './global-skeleton'

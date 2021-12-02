@@ -1,0 +1,1 @@
+export const CHANG_COUNT = 'counter/CHANG_COUNT'

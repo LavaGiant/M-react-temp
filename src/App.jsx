@@ -1,13 +1,12 @@
-import { memo, FC } from 'react'
+import { memo } from 'react'
 import { Provider } from 'react-redux'
 
+import Router from '@/router'
 import store from '@/store'
 
-import Router from '@/router'
-
-const App: FC = memo(() => (
+const App = memo(() => (
   <Provider store={store}>
-    <Router loginAuth={false} />
+    <Router />
   </Provider>
 ))
 

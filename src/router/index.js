@@ -1,4 +1,4 @@
-import { Suspense, memo, Fragment, FC } from 'react'
+import { Suspense, memo, Fragment } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { GuardProvider } from 'react-router-guards';
 
@@ -8,12 +8,8 @@ import { renderRoutes } from '@/utils'
 import mainRoutes from './mainRoutes'
 import { requireLogin } from './auth'
 
-interface Props {
-  loginAuth: boolean
-}
-
-const Router: FC<Props> = memo(({ loginAuth = false }) => {
-  const routerWrapper:JSX.Element = <Suspense fallback={<GlobalSkeleton />}>{renderRoutes(mainRoutes, loginAuth)}</Suspense>
+const Router = memo(({ loginAuth = false }) => {
+  const routerWrapper = <Suspense fallback={<GlobalSkeleton />}>{renderRoutes(mainRoutes, loginAuth)}</Suspense>
   return (
     <BrowserRouter>
       {

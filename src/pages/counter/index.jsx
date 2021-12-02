@@ -1,15 +1,15 @@
-import { memo, FC, useState } from 'react'
+import { memo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router'
+import { useHistory } from 'react-router-dom'
 
 import { Button, InputNumber } from 'antd'
 
 import { handleCountAction, changCountAction } from './store/actionCreators'
 import { CounterWrapper } from './style'
 
-const Counter: FC = memo(() => {
-  const [inputValue, setInputValue] = useState<number>(1)
-  const { count }: { count: number } = useSelector((state: any) => ({
+const Counter = memo(() => {
+  const [inputValue, setInputValue] = useState(1)
+  const { count } = useSelector(state => ({
     count: state.getIn(['counter', 'count'])
   }))
   const history = useHistory()

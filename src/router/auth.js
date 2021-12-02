@@ -1,6 +1,5 @@
-import { GuardFunction } from 'react-router-guards';
-export const requireLogin: GuardFunction = (to, from, next) => {
-  const isLogin: boolean = false
+export const requireLogin = (to, from, next) => {
+  const isLogin = false
   if (to.meta.auth) {
     if (isLogin) {
       if (to.match.path === '/login') {

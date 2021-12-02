@@ -1,7 +1,10 @@
-import { FC, memo } from 'react'
+import { memo } from 'react'
+import { useHistory } from 'react-router-dom'
+import { Button } from 'antd'
 
 import { NotFoundWrapper } from './style'
-const NotFound: FC = memo(() => {
+const NotFound = memo(() => {
+  const history = useHistory()
   return (
     <NotFoundWrapper>
       <div className="content wrap-v2">
@@ -13,6 +16,7 @@ const NotFound: FC = memo(() => {
         <div className="text">
           很抱歉，你要查找的网页找不到
         </div>
+        <Button type="primary" className="back" onClick={() => history.push("/")}>Back</Button>
       </div>
     </NotFoundWrapper>
   )

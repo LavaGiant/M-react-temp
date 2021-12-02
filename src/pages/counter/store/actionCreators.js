@@ -1,11 +1,11 @@
 import * as actionTypes from './constants'
 import { NumberPrecision } from '@/utils'
 
-export const handleCountAction = (addCount: number, way: string) => (dispatch: any, getState: any) => {
-  const { add, sub, mul, div, surp, strip } = new NumberPrecision()
+export const handleCountAction = (addCount, way) => (dispatch, getState) => {
+  const {add, sub, mul, div, surp, strip} = new NumberPrecision()
   const count = getState().getIn(['counter', 'count'])
-  let total: number = 0
-  switch (way) {
+  let total = 0
+  switch (way){
     case 'add':
       total = add(count, addCount)
       break
@@ -27,7 +27,7 @@ export const handleCountAction = (addCount: number, way: string) => (dispatch: a
   dispatch(changCountAction(total))
 }
 
-export const changCountAction = (count: number): StoreGlobal.ActionType => ({
+export const changCountAction = count => ({
   type: actionTypes.CHANG_COUNT,
   payload: count
 })
