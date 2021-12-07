@@ -38,5 +38,8 @@ export const NotFoundWrapper = styled.div`
       font-size: 18px;
       color: #666;
     }
+    .back{
+      margin-top: 20px;
+    }
   }
 `
