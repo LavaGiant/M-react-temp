@@ -1,8 +1,7 @@
 import * as actionTypes from './constants'
-import { NumberPrecision } from '@/utils'
+import { add, sub, mul, div, surp, strip } from '@malp/math-computer'
 
 export const handleCountAction = (addCount, way) => (dispatch, getState) => {
-  const {add, sub, mul, div, surp, strip} = new NumberPrecision()
   const count = getState().getIn(['counter', 'count'])
   let total = 0
   switch (way){
