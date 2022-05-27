@@ -19,7 +19,7 @@ const Counter = memo(() => {
       <div className="count">
         {count}
       </div>
-      <InputNumber min={1} max={100} value={inputValue} onChange={setInputValue} />
+      <InputNumber min={0.01} max={100} value={inputValue} onChange={setInputValue} />
       <div className="control">
         <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'add'))}>+</Button>
         <Button type="primary" size="large" shape="circle" onClick={() => dispatch(handleCountAction(inputValue, 'sub'))}>-</Button>
