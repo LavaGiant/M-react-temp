@@ -6,6 +6,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.6.4",
     "@craco/craco": "^6.3.0",
+    "@malp/math-computer": "^1.0.8",
     "antd": "^4.16.13",
     "cra-template-typescript": "1.1.2",
     "immutable": "^4.0.0-rc.15",
