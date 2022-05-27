@@ -1571,6 +1571,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@malp/math-computer@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@malp/math-computer/-/math-computer-1.0.8.tgz#4748509023881fbd3851938b4c8f38e70630a887"
+  integrity sha512-DnCm5FDzam1WVLsGJERe95zlLm4Hw94y8avEu/qGgwP8ZX7psbivxeska89F1bj7dfXKIqHDX/QuGdIBT3nLDQ==
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -1934,15 +1939,6 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
     redux "^4.0.0"
-
-"@types/react-router-config@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@types/react-router-config/-/react-router-config-5.0.3.tgz#72a53561bcb5e13b82c576527b818fa2579591c7"
-  integrity sha512-38vpjXic0+E2sIBEKUe+RrCmbc8RqcQhNV8OmU3KUcwgy/yzTeo67MhllP+0zjZWNr7Lhw+RnUkL0hzkf63nUQ==
-  dependencies:
-    "@types/history" "*"
-    "@types/react" "*"
-    "@types/react-router" "*"
 
 "@types/react-router-dom@^5.3.0":
   version "5.3.0"
